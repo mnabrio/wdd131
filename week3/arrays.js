@@ -36,8 +36,16 @@ function sum(total, current) {
 const gpaTotal = gpaPoints.reduce(sum, 0)
 console.log(gpaTotal);
 
-const fruits = ['watermelon', 'peach', 'apple', 'tomato', 'grape']
+const gpa = gpaTotal/gpaPoints.length;
+
+const fruits = ['watermelon', 'peach', 'apple', 'tomato', 'grape'];
 const shortFruits = fruits.filter(function(item) {
     return item.length < 6;
 });
 console.log(shortFruits);
+
+const array1 = [12, 34,21, 54];
+const luckyNumber = 21;
+
+const hasLuckyNumber = array1.indexOf(luckyNumber);
+console.log(hasLuckyNumber);
