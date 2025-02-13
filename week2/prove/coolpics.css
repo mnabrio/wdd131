@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+*{
+    font-family: "Mooli", Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+header, footer{
+    background-color: violet;
+    color: white;
+    padding: 20px;
+}
+
+.viewer{
+    position: fixed;
+    inset: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+}
+
+.close-viewer{
+    color: white;
+    grid-row: 1/2;
+    font-size: 2em;
+    text-align: end;
+    padding-right: 10%;
+}
+
+.img-viewer{
+    /* display: block; */
+    max-width: 90%;
+    max-height: 90%;
+    margin: 0 auto;
+    grid-row: 2/3;
+    text-align: center;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+}
+
+.hide{
+    display: none;
+}
+
+nav h2, nav li a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+li{
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main > h2{
+    text-align: center;
+    padding: 20px;
+}
+
+figure img {
+	max-width: 100%;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 5px 2px grey;
+    margin: 20px;
+}
+
+footer{
+    height: 50px;
+    padding: 10px;
+}
+
+p{
+    text-align: left;
+}
+
+@media screen and (min-width: 700px) {
+    .gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+@media screen and (min-width: 1000px) {
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 15px;
+    }
+
+    .gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #menuButton{
+        display: none;
+    }
+
+    .viewer{
+        grid-template-rows: 50px 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+        margin: 1%;
+    }
+
+    .img-viewer{
+        padding: 0 0 1%;
+        max-width: 85vw;
+        max-height: 85vh;
+        object-fit: contain;
+        margin: 0 auto;    
+        grid-column: 2/3;    
+    }
+
+    .close-viewer{
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        grid-column: 2/3;
+    }
+        
+}
