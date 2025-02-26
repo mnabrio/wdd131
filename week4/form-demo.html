@@ -1,0 +1,68 @@
+<!-- form-demo.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="form-demo.css" />
+    <script src="form-demo.js" defer></script>
+  </head>
+  <body>
+    <header><h1>Checkout</h1></header>
+    <main>
+      <section class="errors"></section>
+      <form id="checkoutForm" action="completed.html" method="get">
+    
+        <fieldset>
+            <legend>Personal Info</legend>
+            <p>
+                <label for="fullName">Full Name:</label>
+              <input type="text" id="fullName" name="fullName" required>
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </p>
+            <p>
+                <label for="address">Address:</label>
+                <textarea type="text" name="address" id="address" rows="4" required></textarea>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Payment Info</legend>
+            <p>
+                <label for="paymentMethod">Payment Method:</label>
+                <select name="paymentMethod" id="paymentMethod" required>
+                    <option value="">Select Payment Method</option>
+                    <option value="paypal">Paypal</option>
+                    <option value="creditCard">Credit Card</option>
+                </select>
+            </p>
+            <p class="hide" id="creditCardContainer">
+                <label for="creditCardNumber">Credit Card Number:</label>
+                <input type="text" name="creditCardNumber" id="creditCardNumber" pattern="[0-9] {16}" placeholder="Enter 16 digits">
+            </p>
+            <p class="hide" id="paypalUserContainer">
+                <label for="paypalUserName">Paypal Username:</label>
+                <input type="text" name="paypalUserName" id="paypalUserName" placeholder="Enter PayPal Username">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Interests</legend>
+            <p>
+                <label for="newsletter">Games</label>
+                <input type="checkbox" name="interests" id="games">
+
+            </p>
+            <p>
+                <label for="comics">Comics</label>
+                <input type="checkbox" id="comics" name="interests">
+            </p>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+    </main>
+  </body>
+</html>
