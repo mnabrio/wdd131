@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshin To-Do List</title>
+    <link rel="stylesheet" href="todolist.css">
+    <script src="todolist.js" defer></script>
+</head>
+<body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="images/genshin-impact-landscape.960x540.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <main>
+        <div id="handbook-container">
+            <img class="handbook" src="images/handbook_empty (1).png">
+            
+            <div class="handbook-subheader">
+                <p>Complete 4 commissions daily to obtain the following rewards:</p>
+            </div>
+
+            <div class="task-counter">
+                <span id="completedCount">0</span> / <span id="totalCount">0</span>
+            </div>
+            
+            <div class="primogem-counter">
+                <span id="primo-count"> 0</span>
+               <img src="images/Item_Primogem.webp" alt="Primogem" id="primo">
+           </div>
+
+            <div class="commission-list-container">
+                <ul id="taskList"></ul>
+            </div>
+            
+
+            <div class="encounter-stage-reward">
+                <button id="add-task-button">Add New Commission</button>
+
+            </div>
+        </div>
+    </main>
+</body>
+</html>
